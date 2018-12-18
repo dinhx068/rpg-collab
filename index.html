@@ -32,44 +32,40 @@
       </div>
     </div>
 
-    <!-- Player info -->
-    <div class="w3-container">
-      <div class="w3-card-4 w3-dark-grey" style="width:50%">
-        <div class="w3-container w3-center">
-          <div id="username">Username: <span id="name-text">filler</span></div>
+    <div class="center-player-monster">
+      <div class="flex-container">
+        <!-- Player info -->
+        <div class="info-container w3-center">
+          <div id="username">User: <span id="name-text">filler</span></div>
           <img src="">
           <div class="w3-section">
-            <div id="current-location">Current Location: <span id="location-text">filler</span></div>
             <div>Hp: <span id="player-current-hp">10</span>/<span id="player-max-hp">10</span></div>
+            <div id="current-location">Current Location: <span id="location-text">filler</span></div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Enemy info -->
-    <div class="w3-container">
-      <div class="w3-card-4 w3-dark-grey" style="width:50%">
-        <div class="w3-container w3-center">
-          <div id="monster-name">Monster Name: <span id="monster-name-text">filler</span></div>
+        <!-- Monster info -->
+        <div class="info-container w3-center">
+          <div id="monster-name">Monster: <span id="monster-name-text">filler</span></div>
           <img src="">
           <div class="w3-section">
-            <div>Hp: <span id="monster-current-hp">0</span>/<span id="monster-max-hp">10</span></div>
+            <div>Hp: <span id="monster-current-hp">???</span>/<span id="monster-max-hp">10</span></div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container-flex">
-      <div id="actions-container" style="width:50%">
+    <div class="flex-container">
+      <!-- Log Block -->
+      <div id="actions-container">
         <h2 class="text-center">Log</h2>
       </div>
-      <!-- Jumbotron Title -->
-      <div id="actions-container" style="width:50%">
+      <!-- Actions Block -->
+      <div id="actions-container">
         <h2 class="text-center">Actions</h2>
         <button id="explore-button" class="button button-group-1 w3-button w3-round">Explore</button>
         <button id="rest-button" class="button button-group-1 w3-button w3-round">Rest</button>
-        <button id="buy-button" class="disabled button button-group-1 w3-button w3-round">Buy</button>
-        <button id="chat-button" class="disabled button button-group-1 w3-button w3-round">Chat</button>
+        <button id="buy-button" class="disabled button button-group-1 w3-round">Buy</button>
+        <button id="chat-button" class="disabled button button-group-1 w3-round">Chat</button>
 
         <!-- <button id="attack-button" class="button button-group-2 w3-button w3-round">Attack</button>
         <button id="block-button" class="button button-group-2 w3-button w3-round">Block</button>

@@ -13,7 +13,7 @@ firebase.initializeApp(config);
 // Create a variable to reference the database.
 var database = firebase.database();
 
-// -----------------------------
+// =======================================================================
 
 // connectionsRef references a specific location in our database.
 // All of our connections will be stored in this directory.
@@ -25,7 +25,7 @@ var connectionsRef = database.ref("/connections");
 var connectedRef = database.ref(".info/connected");
 
 // When the client's connection state changes...
-connectedRef.on("value", function(snap) {
+connectedRef.on("value", function (snap) {
   // If they are connected..
   if (snap.val()) {
     // Add user to the connections list.
@@ -36,7 +36,7 @@ connectedRef.on("value", function(snap) {
 });
 
 // When first loaded or when the connections list changes...
-connectionsRef.on("value", function(snap) {
+connectionsRef.on("value", function (snap) {
   // Display the viewer count in the html.
   // The number of online users is the number of children in the connections list.
   $("#connected-viewers").text(snap.numChildren());
