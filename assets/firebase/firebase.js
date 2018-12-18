@@ -1,8 +1,6 @@
 /* global moment firebase */
 
 // Initialize Firebase
-// Make sure to match the configuration to the script version number in the HTML
-// (Ex. 3.0 != 3.7.0)
 var config = {
   apiKey: "AIzaSyA5lIdhHWYj8Y8OHx6iHaVMesO-0jBAEjs",
   authDomain: "rpg-collab.firebaseapp.com",
