@@ -1,5 +1,3 @@
-/* global moment firebase */
-
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyA5lIdhHWYj8Y8OHx6iHaVMesO-0jBAEjs",

@@ -1,44 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
-    <!-- Bootstrap CDN -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <!-- JQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Firebase Reference -->
-    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
-  </head>
 
-  <body>
-    <div class="container">
-      <div class="header">
-        <div>
-          <strong>Monsters slain: </strong><span id="monsters-slain">0</span>
-        </div>
-        <div>
-          <strong>Player casualties: </strong
-          ><span id="player-casualties">0</span>
-        </div>
-        <div>
-          Currently
-          <strong><span id="connected-viewers"></span></strong> person(s) here
-        </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RPG-Collab</title>
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- W3 Stylesheet-->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="header">
+      <div>
+        <strong>Monsters slain: </strong><span id="monsters-slain">0</span>
       </div>
-      <!-- End of header -->
-
-      <!-- Jumbotron Title -->
-      <div class="jumbotron"><h1 class="text-center">Starter thing...</h1></div>
+      <div>
+        <strong>Player casualties: </strong><span id="player-casualties">0</span>
+      </div>
+      <div>
+        Currently <strong><span id="connected-viewers"></span></strong> person(s) here
+      </div>
     </div>
 
-    <!-- Firebase script -->
-    <script src="assets/firebase/firebase.js"></script>
-  </body>
+    <!-- Player info -->
+    <div class="w3-container">
+      <div class="w3-card-4 w3-dark-grey" style="width:50%">
+        <div class="w3-container w3-center">
+          <div id="username">Username: <span id="name-text">filler</span></div>
+          <img src="">
+          <div class="w3-section">
+            <div id="current-location">Current Location: <span id="location-text">filler</span></div>
+            <div>Hp: <span id="player-current-hp">10</span>/<span id="player-max-hp">10</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enemy info -->
+    <div class="w3-container">
+      <div class="w3-card-4 w3-dark-grey" style="width:50%">
+        <div class="w3-container w3-center">
+          <div id="monster-name">Monster Name: <span id="monster-name-text">filler</span></div>
+          <img src="">
+          <div class="w3-section">
+            <div>Hp: <span id="monster-current-hp">0</span>/<span id="monster-max-hp">10</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-flex">
+      <div id="actions-container" style="width:50%">
+        <h2 class="text-center">Log</h2>
+      </div>
+      <!-- Jumbotron Title -->
+      <div id="actions-container" style="width:50%">
+        <h2 class="text-center">Actions</h2>
+        <button id="explore-button" class="button button-group-1 w3-button w3-round">Explore</button>
+        <button id="rest-button" class="button button-group-1 w3-button w3-round">Rest</button>
+        <button id="buy-button" class="disabled button button-group-1 w3-button w3-round">Buy</button>
+        <button id="chat-button" class="disabled button button-group-1 w3-button w3-round">Chat</button>
+
+        <!-- <button id="attack-button" class="button button-group-2 w3-button w3-round">Attack</button>
+        <button id="block-button" class="button button-group-2 w3-button w3-round">Block</button>
+        <button id="items-button" class="disabled button button-group-2 w3-button w3-round">Items</button>
+        <button id="escape-button" class="disabled button button-group-2 w3-button w3-round">Escape</button> -->
+      </div>
+    </div>
+
+  </div>
+  <!-- End of container -->
+
+  <!-- Firebase script -->
+  <script src="assets/firebase/firebase.js"></script>
+</body>
+
 </html>
