@@ -1,0 +1,24 @@
+{
+  "name": "rpg-collab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "firebase": "^5.7.0"
+  },
+  "devDependencies": {},
+  "scripts-2": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinhx068/rpg-collab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dinhx068/rpg-collab/issues"
+  },
+  "homepage": "https://github.com/dinhx068/rpg-collab#readme"
+}
