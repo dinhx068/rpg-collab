@@ -1,0 +1,23 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url("../images/other/main.jpg");
+  background-repeat: no-repeat;
+}
+
+.flex-container {
+  display: flex;
+}
+
+#players-container {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  text-align: center;
+  margin-top: 20%;
+  padding: 5px;
+}
+
+.playable-character {
+  padding: 5px;
+}

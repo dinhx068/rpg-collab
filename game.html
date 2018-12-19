@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Wild</title>
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- W3 Stylesheet-->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/header-style.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/button-style.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/game-style.css" />
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="header">
+      <div>
+        <strong>Monsters slain: </strong><span id="monsters-slain">0</span>
+      </div>
+      <div>
+        <strong>Player casualties: </strong><span id="player-casualties">0</span>
+      </div>
+      <div>
+        Currently <strong><span id="connected-viewers"></span></strong> person(s) here
+      </div>
+    </div>
+
+    <div class="center-player-monster">
+      <div class="flex-container">
+        <!-- Player info -->
+        <div class="info-container w3-center">
+          <div id="username">User: <span id="name-text">filler</span></div>
+          <img src="https://via.placeholder.com/200">
+          <div class="w3-section">
+            <div>Hp: <span id="player-current-hp">10</span>/<span id="player-max-hp">10</span></div>
+            <div id="current-location">Current Location: <span id="location-text">filler</span></div>
+          </div>
+        </div>
+        <!-- Monster info -->
+        <div class="info-container w3-center">
+          <div id="monster-name">Monster: <span id="monster-name-text">filler</span></div>
+          <img src="https://via.placeholder.com/200">
+          <div class="w3-section">
+            <div>Hp: <span id="monster-current-hp">???</span>/<span id="monster-max-hp">10</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-container">
+      <!-- Log Block -->
+      <div id="actions-container">
+        <h2 class="text-center">Log</h2>
+      </div>
+      <!-- Actions Block -->
+      <div id="actions-container">
+        <h2 class="text-center">Actions</h2>
+        <button id="attack-button" class="button button-group-2 w3-button w3-round">Attack</button>
+        <button id="block-button" class="button button-group-2 w3-button w3-round">Block</button>
+        <button id="items-button" class="disabled button button-group-2 w3-round">Items</button>
+        <button id="escape-button" class="button button-group-2 w3-button w3-round">Escape</button>
+      </div>
+    </div>
+
+  </div>
+  <!-- End of container -->
+
+  <!-- Firebase script -->
+  <script src="assets/firebase/firebase.js"></script>
+</body>
+
+</html>
