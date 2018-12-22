@@ -36,6 +36,7 @@ function alertHello(a) {
 // Actionbar calculations
 // Uses a recursive timeout to slowly show the time progressing
 // Once one of the characters hits 100, it will break out the loop and allow the player to choose what to do next.
+// When the enemy attacks, it doesn't stop the timer.
 var playerAB = 0;
 var enemyAB = 0;
 function actionBar() {
@@ -47,20 +48,23 @@ function actionBar() {
       document.getElementById("enemyABLog").innerHTML = `Enemy AB: ${enemyAB}/100`;
       actionBar();
     }, 100);
-  } else {
-    if (playerAB >= 100) {
-      playerAB = 0;
-      document.getElementById("attackStatus").innerHTML = "Player attacked the enemy!";
-    } else if (enemyAB >= 100) {
-      enemyAB = 0;
-      document.getElementById("attackStatus").innerHTML = "Enemy attacked the player!";
-    } else {
-      playerAB = 0;
-      enemyAB = 0;
-      document.getElementById("attackStatus").innerHTML = "The player and enemy attacked each other!";
-    }
+  } else if (playerAB >= 100 && enemyAB >= 100) {
+    playerAB = playerAB - 100;
+    enemyAB = enemyAB - 100;
+    document.getElementById("attackStatus").innerHTML = "The player and enemy attacked each other!";
     document.getElementById("playerABLog").innerHTML = `Player AB: ${playerAB}/100`;
     document.getElementById("enemyABLog").innerHTML = `Enemy AB: ${enemyAB}/100`;
+  } else if (playerAB >= 100) {
+    playerAB = playerAB - 100;
+    document.getElementById("attackStatus").innerHTML = "Player attacked the enemy!";
+    document.getElementById("playerABLog").innerHTML = `Player AB: ${playerAB}/100`;
+    document.getElementById("enemyABLog").innerHTML = `Enemy AB: ${enemyAB}/100`;
+  } else {
+    enemyAB = enemyAB - 100;
+    document.getElementById("attackStatus").innerHTML = "Enemy attacked the player!";
+    document.getElementById("playerABLog").innerHTML = `Player AB: ${playerAB}/100`;
+    document.getElementById("enemyABLog").innerHTML = `Enemy AB: ${enemyAB}/100`;
+    actionBar();
   }
 }
 
