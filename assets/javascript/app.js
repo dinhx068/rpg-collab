@@ -59,12 +59,15 @@ function actionBar() {
     document.getElementById("attackStatus").innerHTML = "Player attacked the enemy!";
     document.getElementById("playerABLog").innerHTML = `Player AB: ${playerAB}/100`;
     document.getElementById("enemyABLog").innerHTML = `Enemy AB: ${enemyAB}/100`;
+    //TODO: You should reenable the buttons here!
   } else {
     enemyAB = enemyAB - 100;
     document.getElementById("attackStatus").innerHTML = "Enemy attacked the player!";
     document.getElementById("playerABLog").innerHTML = `Player AB: ${playerAB}/100`;
     document.getElementById("enemyABLog").innerHTML = `Enemy AB: ${enemyAB}/100`;
-    actionBar();
+    setTimeout(() => {
+      actionBar();
+    }, 1500);
   }
 }
 
