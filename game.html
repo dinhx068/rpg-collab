@@ -60,11 +60,14 @@
       <!-- Log Block -->
       <div id="actions-container">
         <h2 class="text-center">Log</h2>
+        <p id="playerABLog">Player AB: 0/100</p>
+        <p id="enemyABLog">Enemy AB: 0/100</p>
+        <p id="attackStatus"></p>
       </div>
       <!-- Actions Block -->
       <div id="actions-container">
         <h2 class="text-center">Actions</h2>
-        <button id="attack-button" class="button button-group-2 w3-button w3-round">Attack</button>
+        <button id="attack-button" class="button button-group-2 w3-button w3-round" onclick="actionBar()">Attack</button>
         <button id="block-button" class="button button-group-2 w3-button w3-round">Block</button>
         <button id="items-button" class="disabled button button-group-2 w3-round">Items</button>
         <button id="escape-button" class="button button-group-2 w3-button w3-round">Escape</button>
@@ -73,6 +76,9 @@
 
   </div>
   <!-- End of container -->
+
+  <!-- The main app.js file -->
+  <script src="assets/javascript/app.js"></script>
 
   <!-- Firebase script -->
   <script src="assets/firebase/firebase.js"></script>
