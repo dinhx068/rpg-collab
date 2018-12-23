@@ -131,34 +131,39 @@ function actionBar() {
     setTimeout(() => {
       PLAYER_AB += 5;
       ENEMY_AB += 4;
+      if (PLAYER_AB > 100) {
+        PLAYER_AB = 100;
+      }
+      if (ENEMY_AB > 100) {
+        ENEMY_AB = 100;
+      }
       document.getElementById("playerABLog").innerHTML = `Player Action Bar: ${PLAYER_AB}/100`;
       document.getElementById("enemyABLog").innerHTML = `Enemy Action Bar: ${ENEMY_AB}/100`;
       actionBar();
     }, 100);
   } else if (PLAYER_AB >= 100 && ENEMY_AB >= 100) {
       /* When both players reach 100% AB */
-      PLAYER_AB = PLAYER_AB - 100;
-      ENEMY_AB = ENEMY_AB - 100;
+      PLAYER_AB = 0;
+      ENEMY_AB = 0;
       document.getElementById("attackStatus").innerHTML = "The player and enemy attacked each other!";
       document.getElementById("playerABLog").innerHTML = `Player Action Bar: ${PLAYER_AB}/100`;
       document.getElementById("enemyABLog").innerHTML = `Enemy Action Bar: ${ENEMY_AB}/100`;
       toggleDisabledButtons();
   } else if (PLAYER_AB >= 100) {
       /* When player reaches 100% AB */
-      PLAYER_AB = PLAYER_AB - 100;
+      PLAYER_AB = 0;
       document.getElementById("attackStatus").innerHTML = "Player attacked the enemy!";
       document.getElementById("playerABLog").innerHTML = `Player Action Bar: ${PLAYER_AB}/100`;
       document.getElementById("enemyABLog").innerHTML = `Enemy Action Bar: ${ENEMY_AB}/100`;
       toggleDisabledButtons();
-      // Player chooses an action
   } else {
       /* When opponent reaches 100% AB */
-      ENEMY_AB = ENEMY_AB - 100;
+      ENEMY_AB = 0;
       document.getElementById("attackStatus").innerHTML = "Enemy attacked the player!";
       document.getElementById("playerABLog").innerHTML = `Player Action Bar: ${PLAYER_AB}/100`;
       document.getElementById("enemyABLog").innerHTML = `Enemy Action Bar: ${ENEMY_AB}/100`;
       setTimeout(() => {
-      actionBar();
+        actionBar();
       }, 2000);
     }
 }
