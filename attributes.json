@@ -1,41 +1,46 @@
 {
-    "characters": [
-        {
-            "name": "Knight",
+    "characters": {
+        "slayer": {
+            "name": "Slayer",
             "hp": 100,
             "attack": 10,
             "speed": 3,
-            "gold": 50
+            "gold": 50,
+            "img": "assets/images/playable_characters/slayer.png"
         },
-        {
-            "name": "Mage",
+        "dwarf": {
+            "name": "Dwarf",
             "hp": 80,
             "attack": 5,
             "speed": 5,
-            "gold": 300
+            "gold": 300,
+            "img": "assets/images/playable_characters/dwarf.png"
         },
-        {
-            "name": "Shaman",
+        "priest": {
+            "name": "Priest",
             "hp": 60,
             "attack": 15,
             "speed": 5,
-            "gold": 50
+            "gold": 50,
+            "img":"assets/images/playable_characters/priest.png"
         },
-        {
-            "name": "Rouge",
+        "elf": {
+            "name": "Elf",
             "hp": 70,
             "attack": 15,
             "speed": 10,
-            "gold": 50
+            "gold": 50,
+            "img": "assets/images/playable_characters/elf.png"
         },
-        {
-            "name": "Priest",
+        "priestess": {
+            "name": "Priestess",
             "hp": 150,
             "attack": 5,
             "speed": 10,
-            "gold": 50
+            "gold": 50,
+            "img": "assets/images/playable_characters/priestess.png"
         }
-    ],
+    },
     "enemies": [
         {   
             "name": "Grunt",

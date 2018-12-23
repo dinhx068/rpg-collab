@@ -61,6 +61,11 @@ var IN_COMBAT = false;
 
 // Functionality ==================================================================================
 
+// Initialize the characters based on the image chosen
+function initializeCharacter(characterName) {
+  top.location = "inn.html"
+}
+
 // Function is called when the player clicks the search-button which, was to search for an enemy
 // Changing the buttons once the player finds an enemy 
 function switchButtons() {

@@ -12,6 +12,9 @@ package-lock.json
 .env.test.local
 .env.production.local
 
+# accounts
+accounts
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
