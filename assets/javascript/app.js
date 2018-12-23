@@ -16,25 +16,48 @@ $(document).ready(function () {
       case 'items-button':
         console.log(`=============================================`);
         console.log('items-button clicked');
+        console.log('does nothing atm');
         break;
       case 'help-button':
         console.log(`=============================================`);
         console.log('help-button clicked');
-        console.log('Does nothing atm');
+        console.log('does nothing atm');
         break;
       case 'escape-button':
         console.log(`=============================================`);
-        console.log('escape-button clicked');
+        console.log('escape-button clicked, testing AB start');
         ABStart();
+        break;
+      case 'go-back-button':
+        console.log(`=============================================`);
+        console.log('go-back-button clicked');
+        $("#dialog-back").dialog(buttonOptionInn).dialog("open");
         break;
     }
   });
 });
 
+// To style the Dialog,
+// https://stackoverflow.com/questions/1828010/apply-css-to-jquery-dialog-buttons
+// For the button to head back to the inn
+var buttonOptionInn = {
+  autoOpen: false,
+  modal: true,
+  buttons : {
+    "Confirm" : function() {
+      top.location = "inn.html";
+    },
+    "Cancel" : function() {
+      $(this).dialog("close");
+    }
+  }
+}
+
 // GLOBALS ========================================================================================
 var PLAYER_AB = 0;
 var ENEMY_AB = 0;
 var IN_COMBAT = false;
+// var LOCATION = string; // Maybe if we plan on making multiple areas
 
 // Functionality ==================================================================================
 
@@ -56,7 +79,7 @@ function fighto() {
   if (IN_COMBAT === false) {
     IN_COMBAT = true;
     ABStart();
-    actionBar();
+    toggleDisabledButtons();
   } else {
     // Already in combat so no need to keep adding starting AB
     toggleDisabledButtons();
@@ -102,7 +125,6 @@ function toggleDisabledButtons() {
 // Uses a recursive timeout to slowly show the time progressing
 // Once one of the characters hits 100, it will break out the loop and allow the player to choose what to do next.
 // When the enemy attacks, it doesn't stop the timer.
-// *** Need to add random AB start ***
 function actionBar() {
   // Our main loop to stay in combat
   if (PLAYER_AB < 100 && ENEMY_AB < 100) {

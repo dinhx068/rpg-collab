@@ -7,6 +7,8 @@
   <title>Inn~</title>
   <!-- JQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <!-- W3 Stylesheet-->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <!-- Bootstrap CDN -->
@@ -47,11 +49,16 @@
       <!-- Actions Block -->
       <div id="actions-container">
         <h2 class="text-center">Actions</h2>
+        <button id="store-button" class="button button-group-1 w3-button w3-round">Store</button>
         <button id="explore-button" class="button button-group-1 w3-button w3-round">Explore</button>
         <button id="rest-button" class="button button-group-1 w3-button w3-round">Rest</button>
-        <button id="store-button" class="disabled button button-group-1 w3-round">Store</button>
         <button id="chat-button" class="disabled button button-group-1 w3-round">Chat</button>
       </div>
+    </div>
+
+    <!-- Uses JQuery UI -->
+    <div id="dialog-explore" title="Confirm">
+      Ready to head out?
     </div>
 
   </div>
