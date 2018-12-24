@@ -1,0 +1,4 @@
+/* To hide the x button on the top right since, it was not showing */
+.ui-dialog-titlebar-close {
+  display: none;
+}

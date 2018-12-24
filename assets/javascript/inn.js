@@ -7,6 +7,10 @@ $(document).ready(function () {
         console.log(`=============================================`);
         console.log('store-button clicked');
         break;
+      case 'inventory-button':
+        console.log(`=============================================`);
+        console.log('inventory-button clicked');
+        break;
       case 'explore-button':
         console.log(`=============================================`);
         console.log('explore-button clicked');
@@ -16,9 +20,9 @@ $(document).ready(function () {
         console.log(`=============================================`);
         console.log('rest-button clicked');
         break;
-      case 'chat-button':
+      case 'combat-tips-button':
         console.log(`=============================================`);
-        console.log('chat-button clicked');
+        console.log('combat-tips-button clicked');
         break;
     }
   });

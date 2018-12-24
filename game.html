@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Wild</title>
+  <title>Out in the World</title>
   <!-- JQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="assets/css/header-style.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/dialog-style.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/button-style.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/game-style.css" />
   <!-- Firebase Reference -->
@@ -71,7 +72,7 @@
         <h2 class="text-center">Actions</h2>
         <button id="search-button" class="button button-group-2 w3-button w3-round">Search</button>
         <button id="items-button" class="button button-group-2 w3-button w3-round">Items</button>
-        <button id="help-button" class="button button-group-2 w3-round">Help</button>
+        <button id="combat-help-button" class="button button-group-2 w3-button w3-round">Combat Help</button>
         <button id="go-back-button" class="button button-group-2 w3-button w3-round">Go Back to Inn</button>
       </div>
     </div>
@@ -79,7 +80,7 @@
 
     <!-- Uses JQuery UI -->
     <div style="display:none;">
-      <div id="dialog-back" title="Confirm">Want to go back?</div>
+      <div id="dialog-back" title="Confirm">Head back to the Inn?</div>
     </div>
     
 

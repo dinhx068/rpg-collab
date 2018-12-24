@@ -23,9 +23,9 @@ $(document).ready(function() {
         console.log("items-button clicked");
         console.log("does nothing atm");
         break;
-      case "help-button":
+      case "combat-help-button":
         console.log(`=============================================`);
-        console.log("help-button clicked");
+        console.log("combat-help-button clicked");
         console.log("does nothing atm");
         break;
       case "escape-button":
