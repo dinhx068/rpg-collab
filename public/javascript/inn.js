@@ -1,3 +1,5 @@
+// var characters = require("./attributes.js");
+
 $(document).ready(function () {
 
   $('.button').click(function () {
@@ -10,6 +12,7 @@ $(document).ready(function () {
       case 'inventory-button':
         console.log(`=============================================`);
         console.log('inventory-button clicked');
+        console.log(characters.players);
         break;
       case 'explore-button':
         console.log(`=============================================`);
@@ -34,7 +37,7 @@ var buttonOptionExplore = {
   modal: true,
   buttons : {
     "Confirm" : function() {
-      top.location = "game.html";
+      window.location = "http://localhost:3000/unknown";
     },
     "Cancel" : function() {
       $(this).dialog("close");

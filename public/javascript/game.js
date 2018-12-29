@@ -52,7 +52,7 @@ var buttonOptionInn = {
   modal: true,
   buttons: {
     Confirm: function() {
-      top.location = "inn.html";
+      window.location = "http://localhost:3000/inn";
     },
     Cancel: function() {
       $(this).dialog("close");
