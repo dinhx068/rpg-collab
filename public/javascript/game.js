@@ -1,8 +1,3 @@
-// GLOBALS ========================================================================================
-var PLAYER_AB = 0;
-var ENEMY_AB = 0;
-var IN_COMBAT = false;
-
 // Functionality  =================================================================================
 $(document).ready(function() {
   $(".button").click(function() {

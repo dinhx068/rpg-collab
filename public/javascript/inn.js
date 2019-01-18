@@ -1,7 +1,4 @@
-// var characters = require("./attributes.js");
-
 $(document).ready(function () {
-
   $('.button').click(function () {
     let id = $(this).attr('id');
     switch (id) {
@@ -12,7 +9,6 @@ $(document).ready(function () {
       case 'inventory-button':
         console.log(`=============================================`);
         console.log('inventory-button clicked');
-        console.log(characters.players);
         break;
       case 'explore-button':
         console.log(`=============================================`);

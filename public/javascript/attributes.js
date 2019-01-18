@@ -1,5 +1,5 @@
-const players = {
-  "slayer": {
+var players = {
+  slayer: {
     "name": "Slayer",
     "hp": 100,
     "attack": 10,
@@ -7,7 +7,7 @@ const players = {
     "gold": 50,
     "img": "assets/images/playable_characters/slayer.png"
   },
-  "dwarf": {
+  dwarf: {
     "name": "Dwarf",
     "hp": 80,
     "attack": 5,
@@ -15,7 +15,7 @@ const players = {
     "gold": 300,
     "img": "assets/images/playable_characters/dwarf.png"
   },
-  "priest": {
+  priest: {
     "name": "Priest",
     "hp": 60,
     "attack": 15,
@@ -23,7 +23,7 @@ const players = {
     "gold": 50,
     "img":"assets/images/playable_characters/priest.png"
   },
-  "elf": {
+  elf: {
     "name": "Elf",
     "hp": 70,
     "attack": 15,
@@ -31,7 +31,7 @@ const players = {
     "gold": 50,
     "img": "assets/images/playable_characters/elf.png"
   },
-  "priestess": {
+  priestess: {
     "name": "Priestess",
     "hp": 150,
     "attack": 5,
@@ -41,7 +41,7 @@ const players = {
   }
 }
 
-const enemies = {
+var enemies = {
   grunt: {   
     "name": "Grunt",
     "hp": 25,
@@ -64,8 +64,3 @@ const enemies = {
     "img": "" 
   }
 }
-
-module.exports = {
-  players: players,
-  enemies: enemies
-};

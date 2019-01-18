@@ -1,5 +1,8 @@
 // GLOBALS ========================================================================================
 // var LOCATION = string; // Maybe if we plan on making multiple areas
+var PLAYER_AB = 0;
+var ENEMY_AB = 0;
+var IN_COMBAT = false;
 
 var player = {
   name: "",
@@ -10,7 +13,13 @@ var player = {
   img: ""
 };
 
-// module.exports = {}
+var enemy = {
+  name: "",
+  hp: 0,
+  attack: 0,
+  speed: 0,
+  gold: 0,
+  img: ""
+};
 
-// module.exports.player = player;
-// Functionality ==================================================================================
+// Global Functionality ===========================================================================
