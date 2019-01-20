@@ -2,10 +2,11 @@
   "name": "rpg-collab",
   "version": "1.0.0",
   "description": "**Description**",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "express": "^4.16.4",
-    "firebase": "^5.7.2"
+    "firebase": "^5.7.2",
+    "nodemon": "^1.18.9"
   },
   "devDependencies": {},
   "scripts-2": {
@@ -23,6 +24,6 @@
   },
   "homepage": "https://github.com/dinhx068/rpg-collab#readme",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   }
 }

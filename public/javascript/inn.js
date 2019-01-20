@@ -18,6 +18,7 @@ $(document).ready(function () {
       case 'rest-button':
         console.log(`=============================================`);
         console.log('rest-button clicked');
+        // console.log(`Testing output ${player.name}`);
         break;
       case 'combat-tips-button':
         console.log(`=============================================`);

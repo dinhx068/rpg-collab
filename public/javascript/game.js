@@ -22,6 +22,7 @@ $(document).ready(function() {
         console.log(`=============================================`);
         console.log("combat-help-button clicked");
         console.log("does nothing atm");
+        console.log(player.name)
         break;
       case "escape-button":
         console.log(`=============================================`);
